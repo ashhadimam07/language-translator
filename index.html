@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">LANGUAGE TRANSLATOR</a>
+        <span class="menu-toggle"><i  class="fa" aria-hidden="true"></i></span>
+        <nav>
+            <ul>
+                <li><a href="https://utility-web-tools.netlify.app" class="active">Home</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+    <main>
+        <div class="button-box selector">
+            <p class="input-label">TRANSLATE FROM:</p>
+            <select class="select-input" id ="translate-input" name="input">
+                <option>Arabic</option>
+                <option>Bengali</option>
+                <option>Chinese</option>
+                <option>Dutch</option>
+                <option selected>English</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Hindi</option>
+                <option>Russian</option>
+                <option>Swedish</option>
+                <option>Tamil</option>
+                <option>Telgu</option>
+                <option>Turkish</option>
+                <option>Urdu</option>
+            </select>
+            <p class="output-label">TRANSLATE TO:</p>
+            <select class="select-output" id ="translate-output" name="output">
+                <option>Arabic</option>
+                <option>Bengali</option>
+                <option>Chinese</option>
+                <option>Dutch</option>
+                <option selected>English</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Hindi</option>
+                <option>Russian</option>
+                <option>Swedish</option>
+                <option>Tamil</option>
+                <option>Telgu</option>
+                <option>Turkish</option>
+                <option>Urdu</option>
+            </select>
+        </div>
+        <div class="input-box">
+            <input type ="text" id ="input-string" spellcheck="false" placeholder="Enter the string.">
+            <input type ="text" id ="output-string" readonly placeholder="Your results.">
+        </div>
+        <div class="button-box box1">
+            <input type ="button" id ="translate" value="Translate">  
+            <input type ="button" id ="copy" value="Copy"> 
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-heading">WEB TOOLS</div>
+    </footer>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>
