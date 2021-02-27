@@ -5,18 +5,13 @@ const selectInput = document.querySelector('.select-input');
 const selectOutput = document.querySelector('.select-output');
 
 window.addEventListener('load', () => {
-    function translateString(stringInput) {
-        return stringInput.translation;
-    }
-
     buttonTranslate.addEventListener('click', () => {
         fetch(
             `https://api.mymemory.translated.net/get?q=${input.value}&langpair=${selectInput.value}|${selectOutput.value}`,
         )
-            .then((res) => res.json())
+            .then((response) => response.json())
             .then((json) => {
-                const result = json.matches;
-                output.value = result.map(translateString);
+                output.value = json.responseData.translatedText;
             });
     });
 });
